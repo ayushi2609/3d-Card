@@ -1,0 +1,42 @@
+body{
+    perspective: 800px;
+}
+.card{
+    border: 2px solid black;
+    height: 400px;
+    width: 280px;
+    margin: 30px auto;
+    transition-duration: 2s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.side-a, .side-b{
+    width: 100%;
+    height: 100%;
+    border: 2px solid red;
+    position: absolute;
+    /* backface-visibility: hidden; */
+}
+
+.side-a{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLIc0Bz7xbRJ9MWe3zcP_OcKFOTtyMsR1VmBzEEhTeooBt0oIUAR-mLfON35qIHNfcvw&usqp=CAU);
+    /* background-color: aquamarine; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* position: absolute; */
+    /* backface-visibility: hidden; */
+}
+
+.side-b{
+    background-color: pink;
+    font-size: 20px;
+    transform: rotateY(180deg);
+    /* position: absolute; */
+    backface-visibility: hidden;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
